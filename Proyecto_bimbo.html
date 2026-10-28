@@ -1,0 +1,813 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Bimbo | Proyecto escolar</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #292929;
+            background-color: #fff8f4;
+            line-height: 1.7;
+        }
+
+        header {
+            background-color: #c8102e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        header h1 {
+            margin-bottom: 0;
+            font-size: 38px;
+        }
+
+        header p {
+            margin-top: 5px;
+        }
+
+        nav {
+            background-color: #9f0923;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: #c8102e;
+            border-radius: 5px;
+        }
+
+        .portada {
+            min-height: 450px;
+            background-image:
+                linear-gradient(rgba(70, 0, 0, 0.55),
+                                rgba(70, 0, 0, 0.55)),
+                url("https://images.unsplash.com/photo-1509440159596-0249088772ff");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .portada h2 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .portada p {
+            font-size: 20px;
+        }
+
+        .etiqueta {
+            display: inline-block;
+            background-color: #fff;
+            color: #c8102e;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1150px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #00000012;
+            scroll-margin-top: 85px;
+        }
+
+        h2 {
+            color: #c8102e;
+            border-bottom: 3px solid #e9b4bd;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: #9f0923;
+        }
+
+        .imagen {
+            width: 100%;
+            max-height: 340px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 12px 0;
+        }
+
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .tarjeta {
+            background-color: #fff1f3;
+            padding: 18px;
+            border-radius: 10px;
+            border-left: 5px solid #c8102e;
+        }
+
+        .tarjeta img {
+            width: 100%;
+            height: 155px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #d8a6ae;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #c8102e;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fff1f3;
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: #c8102e;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin: 5px;
+        }
+
+        .boton:hover {
+            background-color: #85051b;
+        }
+
+        .cita {
+            background-color: #fff4d8;
+            padding: 15px;
+            border-left: 5px solid #e3aa25;
+        }
+
+        footer {
+            background-color: #292929;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer a {
+            color: #ffd9df;
+        }
+
+        @media (max-width: 600px) {
+            .portada h2 {
+                font-size: 32px;
+            }
+
+            nav a {
+                padding: 6px;
+                font-size: 14px;
+            }
+
+            section {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body id="inicio">
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>GRUPO BIMBO</h1>
+        <p>Una empresa mexicana con presencia internacional</p>
+        <p><strong>Proyecto escolar</strong></p>
+    </header>
+
+    <!-- MENU CON HIPERVINCULOS INTERNOS -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#valores-conalep">Valores CONALEP</a>
+        <a href="#historia">Historia</a>
+        <a href="#empresa">Empresa</a>
+        <a href="#productos">Productos</a>
+        <a href="#proceso">Producción</a>
+        <a href="#ambiente">Medio ambiente</a>
+        <a href="#tabla">Datos</a>
+        <a href="#fuentes">Fuentes</a>
+    </nav>
+
+    <!-- PORTADA CON IMAGEN DE FONDO -->
+    <div class="portada">
+        <span class="etiqueta">PROYECTO ESCOLAR</span>
+        <h2>Grupo Bimbo</h2>
+        <p>Conociendo una de las empresas de panificación
+           más importantes del mundo.</p>
+        <a class="boton" href="#historia">Conocer su historia</a>
+    </div>
+
+    <main>
+
+        <!-- INTRODUCCION -->
+        <section id="introduccion">
+            <h2>Introducción</h2>
+
+            <p>
+                Grupo Bimbo es una empresa de origen mexicano dedicada
+                principalmente a la elaboración y distribución de
+                productos de panificación. A lo largo de su historia,
+                ha ampliado sus operaciones y su catálogo de productos,
+                llegando a numerosos mercados internacionales.
+            </p>
+
+            <p>
+                En esta página se presenta información sobre sus
+                orígenes, actividades, productos, procesos de producción
+                y acciones relacionadas con la sustentabilidad.
+                El objetivo es conocer mejor su importancia económica
+                y su relación con la vida cotidiana.
+            </p>
+
+            <img class="imagen"
+                 src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df"
+                 alt="Pan recién horneado">
+        </section>
+
+
+<!-- APARTADO: VALORES CONALEP -->
+<section id="valores-conalep" class="seccion">
+    <h2>Valores institucionales del CONALEP</h2>
+
+    <p>
+        El CONALEP promueve valores que ayudan a formar estudiantes
+        responsables, respetuosos y comprometidos con la sociedad.
+        Estos valores también pueden aplicarse en una empresa como
+        Grupo Bimbo, mediante el trabajo en equipo, la responsabilidad
+        y el respeto hacia las personas.
+    </p>
+
+    <div class="tarjetas">
+
+        <div class="tarjeta">
+            <h3>1. Respeto a la persona</h3>
+            <p><strong>Frase:</strong> "Respetar al otro es respetarte a ti mismo".</p>
+            <p>Consiste en reconocer la dignidad de cada persona y tratar
+            a los demás con respeto.</p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>2. Compromiso con la sociedad</h3>
+            <p><strong>Frase:</strong> "La sociedad: horizonte de nuestros esfuerzos".</p>
+            <p>Significa trabajar considerando las necesidades de la
+            sociedad y contribuir a su bienestar.</p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>3. Responsabilidad</h3>
+            <p><strong>Frase:</strong> "No esperes a que otros lo hagan por ti".</p>
+            <p>Consiste en cumplir nuestras obligaciones y asumir las
+            consecuencias de nuestras decisiones.</p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>4. Comunicación</h3>
+            <p><strong>Frase:</strong> "Información para el entendimiento,
+            comunicación para el aprendizaje".</p>
+            <p>Consiste en expresar ideas e información de manera clara
+            y escuchar a los demás.</p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>5. Cooperación</h3>
+            <p><strong>Frase:</strong> "Juntos lo haremos mejor".</p>
+            <p>Significa colaborar en equipo, respetar las diferencias
+            y unir esfuerzos para alcanzar objetivos.</p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>6. Mentalidad positiva</h3>
+            <p><strong>Frase:</strong> "El camino más largo empieza con el primer paso".</p>
+            <p>Consiste en afrontar los retos con una actitud positiva
+            y buscar soluciones a los problemas.</p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>7. Calidad</h3>
+            <p><strong>Frase:</strong> "La primera es la vencida".</p>
+            <p>Significa realizar las actividades correctamente desde
+            el principio y procurar buenos resultados.</p>
+        </div>
+
+    </div>
+
+    <p>
+        <strong>Fuente oficial:</strong>
+        <a href="https://www.conalep.edu.mx/valores-conalep"
+           target="_blank" rel="noopener noreferrer">
+           Consultar los valores institucionales del CONALEP
+        </a>
+    </p>
+</section>
+
+
+        <!-- HISTORIA -->
+        <section id="historia">
+            <h2>Historia de Grupo Bimbo</h2>
+
+            <img class="imagen"
+                 src="https://images.unsplash.com/photo-1509440159596-0249088772ff"
+                 alt="Distintos tipos de pan">
+
+            <p>
+                La historia de Bimbo comenzó en la Ciudad de México.
+                La empresa inició operaciones el <strong>2 de diciembre
+                de 1945</strong>, con una pequeña planta y un equipo
+                de trabajadores que elaboraban y distribuían pan.
+            </p>
+
+            <p>
+                Entre sus fundadores estuvieron Lorenzo Servitje,
+                Roberto Servitje, Jaime Sendra, Alfonso Velasco,
+                José T. Mata y Jaime Jorba. Al principio, su oferta
+                incluía pan blanco grande y chico, pan negro y pan tostado.
+            </p>
+
+            <h3>Momentos importantes</h3>
+
+            <ol>
+                <li><strong>1945:</strong> inicio de operaciones en México.</li>
+                <li><strong>Décadas siguientes:</strong> incorporación de
+                    nuevos productos y crecimiento de la distribución.</li>
+                <li><strong>Expansión internacional:</strong> entrada a
+                    nuevos mercados y ampliación de sus operaciones.</li>
+                <li><strong>Actualidad:</strong> desarrollo de un portafolio
+                    internacional de productos y estrategias de sustentabilidad.</li>
+            </ol>
+
+            <p>
+                Fuente histórica:
+                <a href="https://www.grupobimbo.com/es/nosotros/historia"
+                   target="_blank" rel="noopener noreferrer">
+                    Historia oficial de Grupo Bimbo
+                </a>.
+            </p>
+        </section>
+
+        <!-- INFORMACION DE LA EMPRESA -->
+        <section id="empresa">
+            <h2>¿Qué es Grupo Bimbo?</h2>
+
+            <p>
+                Es una empresa multinacional de la industria alimentaria
+                cuya actividad principal es producir y distribuir pan
+                y otros alimentos. Su operación incluye actividades
+                industriales, comerciales, logísticas y de innovación.
+            </p>
+
+            <div class="tarjetas">
+
+                <div class="tarjeta">
+                    <h3>Origen</h3>
+                    <p>
+                        Es una empresa mexicana fundada en 1945
+                        en la Ciudad de México.
+                    </p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Actividad principal</h3>
+                    <p>
+                        Elaboración, comercialización y distribución
+                        de productos de panificación y botanas.
+                    </p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Mercados</h3>
+                    <p>
+                        Cuenta con operaciones en distintas regiones
+                        del mundo y comercializa una variedad de marcas.
+                    </p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Propósito</h3>
+                    <p>
+                        La empresa expresa su propósito como
+                        “Alimentamos un mundo mejor”.
+                    </p>
+                </div>
+
+            </div>
+
+            <h3>Misión, filosofía y valores</h3>
+
+            <p>
+                Grupo Bimbo comunica una filosofía que combina
+                la productividad, la sustentabilidad y el desarrollo
+                humano. También destaca creencias relacionadas con
+                la integridad, el trabajo en comunidad, la eficiencia
+                y la obtención de resultados.
+            </p>
+
+            <p>
+                Consulta la información institucional en
+                <a href="https://www.grupobimbo.com/es/nosotros"
+                   target="_blank" rel="noopener noreferrer">
+                    el sitio oficial de la empresa
+                </a>.
+            </p>
+        </section>
+
+        <!-- PRODUCTOS -->
+        <section id="productos">
+            <h2>Productos de Grupo Bimbo</h2>
+
+            <p>
+                La empresa cuenta con productos de diferentes
+                categorías. La disponibilidad de cada producto
+                depende del país y del mercado.
+            </p>
+
+            <div class="tarjetas">
+
+                <div class="tarjeta">
+                    <img
+                        src="https://images.unsplash.com/photo-1598373182133-52452f7691ef"
+                        alt="Rebanadas de pan">
+                    <h3>Pan de caja</h3>
+                    <p>
+                        Pan para preparar sándwiches, desayunos
+                        y diferentes comidas.
+                    </p>
+                </div>
+
+                <div class="tarjeta">
+                    <img
+                        src="https://images.unsplash.com/photo-1555507036-ab1f4038808a"
+                        alt="Pan dulce y bollería">
+                    <h3>Bollería y pan dulce</h3>
+                    <p>
+                        Productos horneados que pueden consumirse
+                        en el desayuno o como colación.
+                    </p>
+                </div>
+
+                <div class="tarjeta">
+                    <img
+                        src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e"
+                        alt="Galletas horneadas">
+                    <h3>Galletas</h3>
+                    <p>
+                        Productos elaborados con diferentes
+                        ingredientes, sabores y presentaciones.
+                    </p>
+                </div>
+
+                <div class="tarjeta">
+                    <img
+                        src="https://images.unsplash.com/photo-1621939514649-280e2aa2f9a0"
+                        alt="Botanas empaquetadas">
+                    <h3>Botanas</h3>
+                    <p>
+                        La empresa también participa en la categoría
+                        de botanas saladas mediante distintas marcas.
+                    </p>
+                </div>
+
+            </div>
+
+            <p>
+                Para conocer las marcas y los productos disponibles
+                en México, visita
+                <a href="https://www.grupobimbo.com/es/marcas/mexico"
+                   target="_blank" rel="noopener noreferrer">
+                    Marcas de Grupo Bimbo en México
+                </a>.
+            </p>
+        </section>
+
+        <!-- PROCESO DE PRODUCCION -->
+        <section id="proceso">
+            <h2>¿Cómo se elabora el pan?</h2>
+
+            <img class="imagen"
+                 src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df"
+                 alt="Pan elaborado en una panadería">
+
+            <p>
+                La fabricación del pan puede incluir varias etapas.
+                Los procesos exactos dependen del tipo de producto,
+                de la receta y de las instalaciones de cada fabricante.
+            </p>
+
+            <ol>
+                <li>
+                    <strong>Recepción de ingredientes:</strong>
+                    se reciben y revisan las materias primas.
+                </li>
+                <li>
+                    <strong>Mezclado:</strong>
+                    se combinan los ingredientes de acuerdo
+                    con la receta.
+                </li>
+                <li>
+                    <strong>Amasado y fermentación:</strong>
+                    cuando corresponde, se desarrolla la masa
+                    y se deja reposar.
+                </li>
+                <li>
+                    <strong>Horneado:</strong>
+                    la masa se cocina bajo condiciones controladas.
+                </li>
+                <li>
+                    <strong>Enfriamiento y empaque:</strong>
+                    el producto se prepara para su conservación
+                    y distribución.
+                </li>
+                <li>
+                    <strong>Distribución:</strong>
+                    los productos se trasladan a los puntos de venta.
+                </li>
+            </ol>
+
+            <p>
+                Este listado es una explicación general de la
+                elaboración del pan, no una descripción técnica
+                exclusiva de las fábricas de Bimbo.
+            </p>
+        </section>
+
+        <!-- SUSTENTABILIDAD -->
+        <section id="ambiente">
+            <h2>Grupo Bimbo y el medio ambiente</h2>
+
+            <img class="imagen"
+                 src="https://images.unsplash.com/photo-1500382017468-9049fed747ef"
+                 alt="Paisaje natural y campos de cultivo">
+
+            <p>
+                La producción de alimentos utiliza recursos como agua,
+                energía, materias primas y materiales de empaque.
+                Por eso, la sustentabilidad es un tema importante
+                para las empresas de la industria alimentaria.
+            </p>
+
+            <p>
+                Grupo Bimbo publica iniciativas relacionadas con
+                la reducción de emisiones, la disminución de residuos,
+                la agricultura regenerativa y el cuidado de las personas
+                y las comunidades.
+            </p>
+
+            <h3>Algunas áreas de trabajo</h3>
+
+            <ul>
+                <li>Uso eficiente de la energía.</li>
+                <li>Acciones para reducir las emisiones de carbono.</li>
+                <li>Gestión y reducción de residuos.</li>
+                <li>Prácticas agrícolas más sustentables.</li>
+                <li>Apoyo al bienestar de las comunidades.</li>
+            </ul>
+
+            <p class="cita">
+                Importante: esta sección resume las áreas que la empresa
+                comunica en su estrategia. No significa que todos los
+                impactos ambientales estén resueltos ni que todas las
+                metas se hayan alcanzado.
+            </p>
+
+            <p>
+                Fuente:
+                <a href="https://www.grupobimbo.com/es/sustentabilidad"
+                   target="_blank" rel="noopener noreferrer">
+                    Estrategia de sustentabilidad de Grupo Bimbo
+                </a>.
+            </p>
+        </section>
+
+        <!-- TABLA -->
+        <section id="tabla">
+            <h2>Datos generales de la empresa</h2>
+
+            <p>
+                La siguiente tabla resume algunos datos básicos
+                sobre Grupo Bimbo.
+            </p>
+
+            <table>
+                <tr>
+                    <th>Característica</th>
+                    <th>Información</th>
+                </tr>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Grupo Bimbo</td>
+                </tr>
+                <tr>
+                    <td>País de origen</td>
+                    <td>México</td>
+                </tr>
+                <tr>
+                    <td>Inicio de operaciones</td>
+                    <td>2 de diciembre de 1945</td>
+                </tr>
+                <tr>
+                    <td>Industria</td>
+                    <td>Alimentaria y panificación</td>
+                </tr>
+                <tr>
+                    <td>Productos principales</td>
+                    <td>Pan, bollería, galletas, tortillas y botanas</td>
+                </tr>
+                <tr>
+                    <td>Mercado</td>
+                    <td>Internacional</td>
+                </tr>
+            </table>
+
+            <p>
+                Fuente:
+                <a href="https://www.grupobimbo.com/es/nosotros"
+                   target="_blank" rel="noopener noreferrer">
+                    Información institucional de Grupo Bimbo
+                </a>.
+            </p>
+        </section>
+
+        <!-- IMPORTANCIA ECONOMICA -->
+        <section id="economia">
+            <h2>Importancia económica y social</h2>
+
+            <p>
+                Las empresas de panificación participan en una cadena
+                económica que comienza con la producción y compra
+                de materias primas y continúa con la fabricación,
+                el transporte, la comercialización y la venta.
+            </p>
+
+            <p>
+                Por su escala internacional, Grupo Bimbo se relaciona
+                con proveedores, trabajadores, distribuidores,
+                comercios y consumidores de distintos mercados.
+                Sus actividades forman parte de la industria
+                alimentaria y de las redes de distribución.
+            </p>
+
+            <h3>¿Por qué es importante estudiarla?</h3>
+
+            <ul>
+                <li>Permite conocer el desarrollo de una empresa mexicana.</li>
+                <li>Ayuda a comprender cómo funciona una cadena de suministro.</li>
+                <li>Relaciona la producción industrial con el comercio.</li>
+                <li>Permite analizar los retos de la sustentabilidad empresarial.</li>
+            </ul>
+        </section>
+
+        <!-- CONCLUSION -->
+        <section id="conclusion">
+            <h2>Conclusión</h2>
+
+            <p>
+                Grupo Bimbo es un ejemplo de cómo una empresa mexicana
+                puede crecer desde sus inicios hasta desarrollar
+                operaciones internacionales. Su actividad comprende
+                la elaboración de alimentos, la innovación, la logística
+                y la distribución de productos.
+            </p>
+
+            <p>
+                Investigar esta empresa también permite reconocer
+                la importancia de la calidad, la organización,
+                la responsabilidad social y el cuidado ambiental.
+                Aunque existen desafíos en toda actividad industrial,
+                conocer sus procesos y sus compromisos ayuda a analizar
+                el papel que desempeñan las grandes empresas en la sociedad.
+            </p>
+        </section>
+
+        <!-- FUENTES Y CREDITOS -->
+        <section id="fuentes">
+            <h2>Fuentes de información y créditos</h2>
+
+            <p>
+                La información empresarial e histórica de este trabajo
+                se consultó en las siguientes páginas. Los textos
+                explicativos se redactaron para este proyecto escolar.
+            </p>
+
+            <ol>
+                <li>
+                    Grupo Bimbo. <i>Nuestra historia.</i>
+                    <a href="https://www.grupobimbo.com/es/nosotros/historia"
+                       target="_blank" rel="noopener noreferrer">
+                        Consultar fuente
+                    </a>.
+                </li>
+
+                <li>
+                    Grupo Bimbo. <i>Nosotros.</i>
+                    <a href="https://www.grupobimbo.com/es/nosotros"
+                       target="_blank" rel="noopener noreferrer">
+                        Consultar fuente
+                    </a>.
+                </li>
+
+                <li>
+                    Grupo Bimbo. <i>Marcas en México.</i>
+                    <a href="https://www.grupobimbo.com/es/marcas/mexico"
+                       target="_blank" rel="noopener noreferrer">
+                        Consultar fuente
+                    </a>.
+                </li>
+
+                <li>
+                    Grupo Bimbo. <i>Sustentabilidad.</i>
+                    <a href="https://www.grupobimbo.com/es/sustentabilidad"
+                       target="_blank" rel="noopener noreferrer">
+                        Consultar fuente
+                    </a>.
+                </li>
+
+                <li>
+                    DesarrolloWeb. <i>Manual de HTML</i>, material
+                    proporcionado para la actividad escolar.
+                    Utilizado como referencia para la estructura
+                    y los elementos HTML.
+                </li>
+
+                <li>
+                    Unsplash. Fotografías ilustrativas cargadas
+                    mediante enlaces externos. Las imágenes no
+                    representan necesariamente instalaciones
+                    o productos oficiales de Grupo Bimbo.
+                    <a href="https://unsplash.com/"
+                       target="_blank" rel="noopener noreferrer">
+                        Sitio de fotografías
+                    </a>.
+                </li>
+            </ol>
+
+            <p class="cita">
+                Nota académica: esta página es un trabajo educativo
+                independiente y no es un sitio oficial de Grupo Bimbo.
+                Los datos pueden actualizarse; consulta las fuentes
+                originales para verificar la información vigente.
+            </p>
+
+            <a class="boton" href="#inicio">Volver al inicio</a>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PAGINA -->
+    <footer>
+        <p><strong>Proyecto escolar: Grupo Bimbo</strong></p>
+        <p>Trabajo académico de HTML</p>
+        <p>Información consultada en fuentes públicas.</p>
+        <p>
+            <a href="#fuentes">Consultar bibliografía</a> |
+            <a href="#inicio">Regresar a la portada</a>
+        </p>
+        <p>&copy; 2026 - Proyecto escolar, sin afiliación oficial.</p>
+    </footer>
+
+</body>
+</html>
